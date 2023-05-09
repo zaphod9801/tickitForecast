@@ -14,6 +14,7 @@ COPY . /app/
 # Install application
 RUN pip install -r requirements.txt
 RUN pip install -e .
+RUN pytest ./app/tests
 
 # Expose the port where your app runs
 EXPOSE 8000
