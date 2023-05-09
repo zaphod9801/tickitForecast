@@ -50,6 +50,6 @@ def prediction_sarimax():
     print(f"Best parameters: {best_params}, Best seasonal parameters: {best_seasonal_params}")
     print(f"RMSE: {best_score}")
 
-    return best_preds
+    return best_preds, best_score, best_params
     
 #print(prediction_sarimax())

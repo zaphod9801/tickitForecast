@@ -15,19 +15,19 @@ def train_linear_regression(data, n_lags):
     mse = mean_squared_error(y_test, y_pred)
     print(f"Mean Squared Error: {mse}")
 
-    return model
+    return model, mse
 
 
 def prediction_linear_regression():
     data = load_data()
     aggregated_data = aggregate_data_by_date(data)
     n_lags = 7
-    model = train_linear_regression(aggregated_data, n_lags)
+    model, mse = train_linear_regression(aggregated_data, n_lags)
     
     # Make predictions for the next 7 days
     last_n_days = create_lag_features(aggregated_data, n_lags).tail(1).drop(columns=["qtysold", "sale_date"]).values
     predictions = model.predict(np.repeat(last_n_days, 7, axis=0))
     
-    return predictions
+    return predictions, mse
 
 #print(prediction_linear_regression())
