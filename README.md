@@ -37,6 +37,6 @@ docker run -d -p 8080:8080 [DESIRED_IMAGE_NAME]:latest
 ```
 Now you can browse to [localhost:8080/predict] and check the endpoint working.
 
-This project is currently temporaly deployed in the following URL: https://fastapi-tickit-app-tzfffgrx2a-ue.a.run.app/predict/ so you can check here the endpoint without doing anything 
+This project is currently temporaly deployed in the following URL: https://fastapi-tickit-app-tzfffgrx2a-ue.a.run.app/predict/ so you can check there the endpoint without doing anything 
 of the above exposed, but only for the next week.
 
