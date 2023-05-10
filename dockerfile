@@ -17,7 +17,7 @@ RUN pip install -e .
 RUN pytest ./app/tests
 
 # Expose the port where your app runs
-EXPOSE 8000
+EXPOSE 8080
 
 # Start the application
 CMD ["python", "app/main_start.py"]
