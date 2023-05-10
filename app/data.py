@@ -1,7 +1,5 @@
 import numpy as np
 import pandas as pd
-from sklearn.model_selection import train_test_split
-
 
 def load_data():
     category_df = pd.read_csv("data/category_pipe.txt", sep="|", header=None, names=["catid", "catgroup", "catname", "catdesc"])
@@ -36,7 +34,7 @@ def split_data_sarimax():
     X = daily_sales_df["sale_date"].values.reshape(-1, 1)
     y = daily_sales_df["qtysold"].values
         
-    # Divida los datos en conjuntos de entrenamiento (80%) y prueba (20%) según la fecha
+    # Dividir los datos en conjuntos de entrenamiento (80%) y prueba (20%) según la fecha
     train_size = int(len(X) * 0.8)
     X_train, X_test = X[:train_size], X[train_size:]
     y_train, y_test = y[:train_size], y[train_size:]

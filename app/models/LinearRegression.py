@@ -24,7 +24,6 @@ def prediction_linear_regression():
     n_lags = 7
     model, mse = train_linear_regression(aggregated_data, n_lags)
     
-    # Make predictions for the next 7 days
     last_n_days = create_lag_features(aggregated_data, n_lags).tail(1).drop(columns=["qtysold", "sale_date"]).values
     predictions = model.predict(np.repeat(last_n_days, 7, axis=0))
     

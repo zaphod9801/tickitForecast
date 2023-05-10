@@ -9,7 +9,7 @@ def grid_search(train, test, p_values, d_values, q_values, P_values, D_values, Q
     best_score, best_params, best_seasonal_params = float("inf"), None, None
     best_model, best_preds = None, None
     
-    # Crea una lista de combinaciones de parámetros
+    # Crear una lista de combinaciones de parámetros
     pdq = list(itertools.product(p_values, d_values, q_values))
     seasonal_pdq = list(itertools.product(P_values, D_values, Q_values, s_values))
 
