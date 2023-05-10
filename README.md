@@ -21,6 +21,7 @@ This command will start a uvicorn server running in [localhost:8080]. If you wan
 models inside the app and will give you the sales of the following 7 days (using the data provided in the url [https://docs.aws.amazon.com/redshift/latest/gsg/samples/tickitdb.zip])
 The response should look like this:
 ![image](https://github.com/zaphod9801/tickitForecast/assets/71454879/2046d2b2-fdc0-4efc-8d7a-f26edb00b3be)
+
 This endpoint just accept a GET request so keep it in mind.
 
 Alternativately you also can run this with Docker, for this you first have to have Docker install in your system, check it out this guide about how to do it: https://www.docker.com/get-started/
